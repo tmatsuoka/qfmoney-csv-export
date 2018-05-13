@@ -1,0 +1,25 @@
+{
+  "name": "QF Money CSV Export",
+  "version": "0.1",
+  "description": "QF Money CSV Export",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.qantasmoney.com/account/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "page_action": {
+    "default_title": "QF Money CSV Export",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "declarativeContent",
+    "downloads"
+  ],
+  "manifest_version": 2
+}
